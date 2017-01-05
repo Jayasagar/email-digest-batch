@@ -1,0 +1,67 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://repo.spring.io/release" }
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE"
+        classpath "io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE"
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version '1.4.2.RELEASE'
+}
+
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: "io.spring.dependency-management"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    baseName = 'email-digest-batch'
+    version =  '0.1'
+}
+
+springBoot {
+    executable = true
+}
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    // The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.18'
+
+    // Lomback
+    compileOnly "org.projectlombok:lombok:1.16.12"
+
+    // Spring Rest template
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-mail")
+
+    // Mongo
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+
+    // Jackson for JOSN parsing
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jdk8")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
+    // Tests
+    //testCompile("org.springframework.boot:spring-boot-starter-test")
+    //compile group: 'com.github.fakemongo', name: 'fongo', version: '2.0.9'
+    //testCompile 'org.mongodb:mongo-java-driver:3.4.1'
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:2.+"
+}

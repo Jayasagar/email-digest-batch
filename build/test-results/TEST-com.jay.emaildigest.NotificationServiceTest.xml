@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jay.emaildigest.NotificationServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-05T11:55:14" hostname="Jayasagars-MacBook-Pro.local" time="0.085">
+  <properties/>
+  <testcase name="user_with_hourly_digest_body_message_joining_works" classname="com.jay.emaildigest.NotificationServiceTest" time="0.085"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
