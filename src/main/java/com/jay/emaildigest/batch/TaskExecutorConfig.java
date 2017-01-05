@@ -16,10 +16,10 @@ public class TaskExecutorConfig {
     @Bean
     public Executor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(2);
-        executor.setMaxPoolSize(5);
-        executor.setQueueCapacity(20);
-        executor.setThreadNamePrefix("MyExecutor-");
+        executor.setCorePoolSize(10);
+        //executor.setMaxPoolSize(10);
+        //executor.setQueueCapacity(20);
+        executor.setThreadNamePrefix("Komoot-hourly-digest-");
         executor.initialize();
         return executor;
     }

@@ -5,6 +5,7 @@ import com.jay.emaildigest.batch.repo.NotificationRepo;
 import com.jay.emaildigest.batch.service.NotificationService;
 import com.jay.emaildigest.batch.model.Notification;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -26,6 +27,8 @@ public class NotificationServiceTest {
     private NotificationRepo notificationRepo;
 
     @Test
+    @Ignore
+    @Deprecated
     public void user_with_hourly_digest_body_message_joining_works() {
 
         // Arrange

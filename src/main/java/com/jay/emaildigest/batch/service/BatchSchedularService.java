@@ -32,7 +32,7 @@ public class BatchSchedularService {
      * Using streams process the data, group them and construct the email body.
      */
     //@Scheduled(cron = "0 0 * * * *") //Every hour of every day
-    @Scheduled(cron = "0 0/1 * * * *") // Every 1 minutes for testing
+    //@Scheduled(cron = "0 0 * * * *") // Every 1 minutes for testing
     public void sendHourlyDigestEmail() {
         LOG.info(String.format("Hourly schedular, time now: %s", LocalDateTime.now().toString()));
 
@@ -83,7 +83,7 @@ public class BatchSchedularService {
                                 .append("\n\n")
                                 .append(entry.getValue());
 
-                        emailService.sendMailMessage(entry.getKey().getEmail(), body.toString());
+                        //emailService.sendMailMessage(entry.getKey().getEmail(), body.toString());
                     });
 
             // TODO : Delete the processed records

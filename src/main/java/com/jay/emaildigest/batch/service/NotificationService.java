@@ -1,8 +1,7 @@
 package com.jay.emaildigest.batch.service;
 
-import com.jay.emaildigest.batch.JSON;
-import com.jay.emaildigest.batch.model.User;
 import com.jay.emaildigest.batch.model.Notification;
+import com.jay.emaildigest.batch.model.User;
 import com.jay.emaildigest.batch.repo.NotificationRepo;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +19,6 @@ public class NotificationService {
 
     @Autowired
     private NotificationRepo notificationRepo;
-
-    public void saveNotification(String message) {
-        Notification notification = JSON.MAPPER.toObject(message.getBytes(), Notification.class);
-        notificationRepo.save(notification);
-
-        LOG.info(String.format("Notification saved %s,%s", notification.getEmail(), notification.getName()));
-    }
 
     public List<Notification> getUnProcessedUserNotifications(String email) {
         return notificationRepo.getUserNotifications(email);
