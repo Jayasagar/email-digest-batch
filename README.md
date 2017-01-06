@@ -1,6 +1,10 @@
 # email-digest-batch
 Batch processor to aggregate and send email
 
+### Installations
+* Install JDK 8
+* MongoDB
+
 #### How to run
 * Check out the code from https://github.com/Jayasagar/email-digest-batch
 * Run **/.gradlew build** It should produce executable jar under build/libs
