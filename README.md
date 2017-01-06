@@ -20,5 +20,9 @@ Batch processor to aggregate and send email
 ### Current execution flow and solution implemented using Spring Schedular
 * Every hour run the batch job
 * Pull all distinct email Ids 
-* Create a HourlyEmailTask, which is responsible for the aggregating each user message and send an email.
+* Create a HourlyEmailTask (which will be submitted to thread pool), which is responsible for the aggregating each user message and send an email.
 * Delete the records once email sent.
+
+#### Quick simple Performance test
+* I have tested the batch job with 1 million records in MongoDB, my observation is without send email, it took almost 6 minutes to process
+* 10000 user email and 100 message for each user is the setup I made :) 
