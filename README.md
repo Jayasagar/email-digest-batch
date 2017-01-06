@@ -11,6 +11,9 @@ Batch processor to aggregate and send email
 * Create a dummy gmail account, modify email and password the **application.properties** under project checkout root folder
 
 ##### Run as a service
+* sudo mkdir /var/email-digest-batch
+* sudo cp $CHECK_OUT/build/libs/email-digest-batch-0.1.jar /var/email-digest-batch
+* sudo cp $CHECK_OUT/application.properties /var/email-digest-batch
 * sudo ln -s /var/email-digest/email-digest-batch-0.1.jar /etc/init.d/email-digest-batch
 * sudo /etc/init.d/email-digest-batch start|stop|restart
 
