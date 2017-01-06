@@ -26,10 +26,10 @@ public class Application {
 
         //System.out.println(notificationRepo.getUserNotifications("jayasagar1@gmail.com").size());
 
-        System.out.println("Start:" + Instant.now());
-        BatchSchedularService batchSchedularService = ctx.getBean(BatchSchedularService.class);
-        batchSchedularService.sendHourlyDigestEmail();
-        System.out.println("End:" + Instant.now());
+        //System.out.println("Start:" + Instant.now());
+        //BatchSchedularService batchSchedularService = ctx.getBean(BatchSchedularService.class);
+        //batchSchedularService.sendHourlyDigestEmail();
+        //System.out.println("End:" + Instant.now());
     }
 
     private static void saveRecords(ConfigurableApplicationContext ctx) {
