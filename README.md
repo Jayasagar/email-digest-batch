@@ -1,4 +1,8 @@
 # email-digest-batch
 Batch processor to aggregate and send email
 
-### Tasks
+### How to run
+* 
+
+### Solution and Execution flow
+* 

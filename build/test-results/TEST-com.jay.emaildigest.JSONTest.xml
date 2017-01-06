@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jay.emaildigest.JSONTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-05T11:55:13" hostname="Jayasagars-MacBook-Pro.local" time="0.39">
-  <properties/>
-  <testcase name="toObject_should_return_given_class_type" classname="com.jay.emaildigest.JSONTest" time="0.39"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
