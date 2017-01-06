@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
@@ -68,6 +69,7 @@ public class BatchSchedularService {
         public void run() {
             userUnProcessedNotifications
                     .parallelStream()
+                    .sorted(Comparator.comparing(Notification::getTimestamp))
                     // Transfer data to Entry<User, Notification>
                     .map(Notification::userNotificationEntry)
                     // Group by email/user and map list of notification messages to single digest message!!

@@ -29,6 +29,7 @@ public class NotificationServiceTest {
     @Test
     @Ignore
     @Deprecated
+    // Currently not using this solution, test not valid anymore
     public void user_with_hourly_digest_body_message_joining_works() {
 
         // Arrange
