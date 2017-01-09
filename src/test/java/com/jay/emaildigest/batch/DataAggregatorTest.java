@@ -13,6 +13,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * This is independent local test.
+ * TODO: Need to improve
+ */
 public class DataAggregatorTest {
 
     @Test

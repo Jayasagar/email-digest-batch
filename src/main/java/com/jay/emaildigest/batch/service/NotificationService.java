@@ -32,6 +32,7 @@ public class NotificationService {
         return notificationRepo.getAllUnProcessedDistinctEmails();
     }
 
+    @Deprecated
     public Map<User, String> lastOneHourNotifications() {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime hourBack = LocalDateTime.now().minusHours(1);
