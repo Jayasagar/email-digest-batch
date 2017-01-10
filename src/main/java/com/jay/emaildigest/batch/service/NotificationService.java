@@ -33,6 +33,9 @@ public class NotificationService {
     }
 
     @Deprecated
+    /**
+     * This was the initial thought !! but later realized, may not work.
+     */
     public Map<User, String> lastOneHourNotifications() {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime hourBack = LocalDateTime.now().minusHours(1);

@@ -27,7 +27,7 @@ public class BatchSchedularService {
     private EmailService emailService;
 
     /**
-     * Pull all distinct the records by last 1 hour range records.
+     * Pull all distinct the records by email.
      * Using streams process the data, group them and construct the email body.
      */
     @Scheduled(cron = "0 0 * * * *") //Every hour of every day
